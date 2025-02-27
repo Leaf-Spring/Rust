@@ -1,5 +1,9 @@
 fn main() {
-    let x: (i32, f64, u8) = (500, 6.4, 1);
+    let x = plus_one(5);
 
-    println!("{} {} {}", x.0, x.1, x.2);
+    println!("The value of x is: {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
