@@ -1,16 +1,11 @@
 fn main() {
-    println!(
-        "{}, {}, {}, {}, {}",
-        fibonacci(1),
-        fibonacci(2),
-        fibonacci(3),
-        fibonacci(10),
-        fibonacci(11)
-    );
+    for i in 1..=37 {
+        println!("[{i}]: {}", fibonacci(i));
+    }
 }
 
 fn fibonacci(n: u32) -> u32 {
-    if 1 == n {
+    if 1 == n || 0 == n {
         return 0;
     }
 
