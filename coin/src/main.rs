@@ -46,4 +46,12 @@ fn main() {
     let coin: Coin = Coin::Dime;
 
     println!("{}", value_in_cents(coin));
+
+    let coin: Coin = Coin::Quarter(UsState::Alabama);
+    let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {state:?}!");
+    } else {
+        count += 1;
+    }
 }
